@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Row, Col, Form, FormControl } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 import fantasy from "../data/fantasy.json";
+import CommentArea from "./CommentArea";
 
 class BookListClass extends Component {
   // state = {
@@ -31,11 +32,13 @@ class BookListClass extends Component {
                 <SingleBook key={book.asin} book={book} />
               ))} */}
               {fantasy.map((book) => (
-                <SingleBook key={book.asin} book={book} mySelectedBook={this.props.onSelectBook} />
+                <SingleBook key={book.asin} book={book} mySelectedBook={this.props.comments} />
               ))}
             </Row>
           </Col>
-          <Col xs={5}></Col>
+          <Col xs={5}>
+            <CommentArea comments={this.props.comments} />
+          </Col>
         </Row>
       </Container>
     );

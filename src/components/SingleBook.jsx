@@ -6,7 +6,6 @@ const SingleBook = ({ book, mySelectedBook }) => {
 
   const handleClick = () => {
     mySelectedBook(asin);
-    console.log(asin);
   };
 
   return (
