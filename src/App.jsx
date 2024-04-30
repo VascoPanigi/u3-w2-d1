@@ -48,7 +48,11 @@ class App extends Component {
         <main className="bg-dark">
           <MyHero />
           {/* <BookListHooks /> */}
-          <BookListClass mySelectedBook={this.handleSelectedBook} comments={this.state.comments} />
+          <BookListClass
+            mySelectedBook={this.handleSelectedBook}
+            comments={this.state.comments}
+            selectedBookAsin={this.state.selectedBook}
+          />
         </main>
         <footer className="bg-dark">
           <MyFooter />

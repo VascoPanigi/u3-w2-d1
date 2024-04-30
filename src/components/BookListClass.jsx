@@ -32,7 +32,12 @@ class BookListClass extends Component {
                 <SingleBook key={book.asin} book={book} />
               ))} */}
               {fantasy.map((book) => (
-                <SingleBook key={book.asin} book={book} mySelectedBook={this.props.comments} />
+                <SingleBook
+                  key={book.asin}
+                  book={book}
+                  mySelectedBook={this.props.mySelectedBook}
+                  selectedBookAsin={this.props.selectedBookAsin}
+                />
               ))}
             </Row>
           </Col>
